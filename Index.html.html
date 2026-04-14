@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Belle Table · Menu Collection 2025</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --gold:#B8975A;--gold-dark:#9A7A3A;--gold-light:#E8D4A0;--gold-bg:#FAF6EE;
+  --rose:#B87E72;--rose-dark:#9A6055;--rose-light:#E8C4BC;--rose-bg:#FBF4F1;
+  --lav:#8E7FA8;--lav-dark:#6A5F88;--lav-light:#D4CCDF;--lav-bg:#F5F1FA;
+  --ink:#1A1614;--ink2:#2E2620;--muted:#8A847C;--border:#E2DBD0;--cream:#FEFCF8;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Jost',sans-serif;
+  background:#EDEAE4;
+  color:var(--ink);
+  min-height:100vh;
+}
+
+/* ── NAV ── */
+.site-nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(254,252,248,.96);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+  padding:0 2rem;
+  display:flex;align-items:center;justify-content:space-between;
+  height:60px;
+}
+.nav-brand{
+  font-family:'Cormorant Garamond',serif;
+  font-size:20px;font-weight:300;letter-spacing:.08em;
+  color:var(--ink2);
+}
+.nav-brand span{color:var(--muted);font-style:italic}
+.nav-tabs{display:flex;gap:0;border:1px solid var(--border);border-radius:3px;overflow:hidden}
+.nav-tab{
+  padding:.5rem 1.75rem;
+  font-family:'Jost',sans-serif;font-size:10px;font-weight:400;
+  letter-spacing:.22em;text-transform:uppercase;
+  border:none;background:transparent;cursor:pointer;
+  color:var(--muted);transition:all .22s;white-space:nowrap;
+}
+.nav-tab+.nav-tab{border-left:1px solid var(--border)}
+.nav-tab.active-g{background:var(--gold-bg);color:var(--gold-dark);font-weight:500}
+.nav-tab.active-r{background:var(--rose-bg);color:var(--rose-dark);font-weight:500}
+.nav-tab.active-l{background:var(--lav-bg);color:var(--lav-dark);font-weight:500}
+
+/* ── PANELS ── */
+.panel{display:none}
+.panel.on{display:block;animation:fadeUp .45s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── PAGE WRAPPER ── */
+.menu-page{max-width:780px;margin:2.5rem auto 4rem;background:var(--cream);border:1px solid var(--border);}
+
+/* ── COVER ── */
+.cover{position:relative;height:540px;overflow:hidden}
+.cover-photo{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.72)}
+.cover-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to bottom, rgba(20,14,8,.08) 0%, rgba(20,14,8,.55) 60%, rgba(20,14,8,.82) 100%);
+}
+.cover-content{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:3rem 3.5rem;
+  text-align:center;
+  color:#fff;
+}
+.cover-eyebrow{
+  font-size:9px;font-weight:300;letter-spacing:.45em;text-transform:uppercase;
+  color:rgba(255,255,255,.65);margin-bottom:1.25rem;
+}
+.cover-ornament{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:1.25rem}
+.orn-line{height:.5px;width:55px;background:currentColor;opacity:.5}
+.orn-dia{width:5px;height:5px;transform:rotate(45deg);background:currentColor;flex-shrink:0}
+.cover-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:68px;font-weight:300;letter-spacing:.04em;line-height:.95;
+  color:#fff;margin-bottom:.6rem;text-shadow:0 2px 20px rgba(0,0,0,.3);
+}
+.cover-sub{
+  font-size:9.5px;font-weight:300;letter-spacing:.38em;text-transform:uppercase;
+  color:rgba(255,255,255,.6);margin-bottom:1.5rem;
+}
+.cover-tagline{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:16px;font-weight:300;color:rgba(255,255,255,.75);line-height:1.65;
+}
+
+/* ── PHOTO STRIP ── */
+.photo-strip{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;height:200px}
+.strip-cell{position:relative;overflow:hidden}
+.strip-cell img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.strip-cell:hover img{transform:scale(1.04)}
+.strip-label{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:8px 10px 9px;
+  font-size:8.5px;font-weight:300;letter-spacing:.2em;text-transform:uppercase;
+  color:rgba(255,255,255,.92);
+}
+
+/* ── BODY ── */
+.menu-body{padding:2.75rem 3.5rem 1rem}
+
+/* ── SECTION ── */
+.section{margin-bottom:2.75rem}
+.sec-head{display:flex;align-items:center;gap:14px;margin-bottom:1.5rem}
+.sec-title{font-size:8.5px;font-weight:500;letter-spacing:.36em;text-transform:uppercase;white-space:nowrap;flex-shrink:0}
+.sec-rule{flex:1;height:.5px;background:var(--border)}
+
+/* ── FEATURED ROW ── */
+.featured-row{display:grid;grid-template-columns:160px 1fr;gap:0;border:1px solid var(--border);margin-bottom:2rem}
+.feat-img{height:140px;overflow:hidden}
+.feat-img img{width:100%;height:100%;object-fit:cover;display:block}
+.feat-text{padding:1.25rem 1.5rem;display:flex;flex-direction:column;justify-content:center;border-left:1px solid var(--border)}
+.feat-name{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;line-height:1.1;margin-bottom:.4rem}
+.feat-desc{font-size:11px;font-weight:300;color:var(--muted);line-height:1.65;letter-spacing:.02em}
+.feat-badge{
+  display:inline-block;margin-top:.65rem;
+  font-size:8px;font-weight:400;letter-spacing:.15em;text-transform:uppercase;
+  padding:3px 8px;border-radius:1px;
+}
+
+/* ── ITEMS GRID ── */
+.items-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 2.75rem}
+.item{padding:.55rem 0;border-bottom:.5px solid #EDE8DF}
+.item:last-child{border-bottom:none}
+.iname{font-family:'Cormorant Garamond',serif;font-size:17.5px;font-weight:500;line-height:1.2}
+.idesc{font-size:10.5px;font-weight:300;color:var(--muted);letter-spacing:.025em;margin-top:2px;line-height:1.5}
+.ibadge{
+  font-size:7.5px;font-weight:400;letter-spacing:.1em;text-transform:uppercase;
+  padding:2px 5px;border-radius:1px;vertical-align:middle;margin-left:5px;
+}
+.istar{font-size:10px;color:var(--muted);margin-left:3px;opacity:.6}
+
+/* ── PHOTO PAIR ── */
+.photo-pair{display:grid;grid-template-columns:3fr 2fr;gap:3px;margin:1.75rem 0;height:220px}
+.photo-pair .pc{position:relative;overflow:hidden}
+.photo-pair .pc img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s}
+.photo-pair .pc:hover img{transform:scale(1.03)}
+.pc-label{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:8px 12px 10px;
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:13px;font-weight:300;color:rgba(255,255,255,.88);
+}
+
+/* ── CHEF NOTE ── */
+.chef-note{
+  display:flex;gap:18px;align-items:flex-start;
+  padding:1.25rem 1.5rem;margin:1.5rem 0;
+  border-left:1.5px solid;
+}
+.cn-quote{font-size:28px;line-height:1;font-family:'Cormorant Garamond',serif;opacity:.4;flex-shrink:0;margin-top:-4px}
+.cn-inner{}
+.cn-label{font-size:8px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;margin-bottom:.4rem}
+.cn-text{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;font-weight:300;line-height:1.7;color:var(--ink2)}
+.cn-sig{margin-top:.5rem;font-size:9px;font-weight:300;letter-spacing:.12em;color:var(--muted)}
+
+/* ── FULL BLEED PHOTO ── */
+.full-photo{height:260px;overflow:hidden;position:relative}
+.full-photo img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.8)}
+.full-photo-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px}
+.fpo-title{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:#fff;letter-spacing:.06em;text-shadow:0 1px 12px rgba(0,0,0,.3)}
+.fpo-rule{width:60px;height:.5px;background:rgba(255,255,255,.5)}
+.fpo-sub{font-size:9px;font-weight:300;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+
+/* ── FOOTER ── */
+.menu-footer{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:1.25rem 3.5rem 1.75rem;
+  border-top:.5px solid var(--border);
+}
+.footer-left{font-size:8.5px;font-weight:300;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);line-height:1.8}
+.footer-brand{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:300;letter-spacing:.1em}
+
+/* ── THEME COLORS ── */
+.t-gold .sec-title{color:var(--gold-dark)}
+.t-gold .ibadge{background:var(--gold-bg);color:var(--gold-dark)}
+.t-gold .feat-badge{background:var(--gold-bg);color:var(--gold-dark)}
+.t-gold .chef-note{border-color:var(--gold);background:var(--gold-bg)}
+.t-gold .cn-label{color:var(--gold-dark)}
+.t-gold .strip-label{background:linear-gradient(transparent,rgba(160,115,40,.85))}
+.t-gold .pc-label{background:linear-gradient(transparent,rgba(140,100,30,.75))}
+.t-gold .footer-brand{color:var(--gold-dark)}
+
+.t-rose .sec-title{color:var(--rose-dark)}
+.t-rose .ibadge{background:var(--rose-bg);color:var(--rose-dark)}
+.t-rose .feat-badge{background:var(--rose-bg);color:var(--rose-dark)}
+.t-rose .chef-note{border-color:var(--rose);background:var(--rose-bg)}
+.t-rose .cn-label{color:var(--rose-dark)}
+.t-rose .strip-label{background:linear-gradient(transparent,rgba(150,85,72,.85))}
+.t-rose .pc-label{background:linear-gradient(transparent,rgba(130,70,60,.75))}
+.t-rose .footer-brand{color:var(--rose-dark)}
+
+.t-lav .sec-title{color:var(--lav-dark)}
+.t-lav .ibadge{background:var(--lav-bg);color:var(--lav-dark)}
+.t-lav .feat-badge{background:var(--lav-bg);color:var(--lav-dark)}
+.t-lav .chef-note{border-color:var(--lav);background:var(--lav-bg)}
+.t-lav .cn-label{color:var(--lav-dark)}
+.t-lav .strip-label{background:linear-gradient(transparent,rgba(100,80,130,.85))}
+.t-lav .pc-label{background:linear-gradient(transparent,rgba(90,72,118,.75))}
+.t-lav .footer-brand{color:var(--lav-dark)}
+
+/* ── ORNAMENT DIVIDER ── */
+.orn-divider{display:flex;align-items:center;gap:12px;justify-content:center;margin:2rem 0;opacity:.4}
+.od-line{flex:1;max-width:100px;height:.5px;background:var(--border)}
+.od-dot{width:4px;height:4px;border-radius:50%;background:var(--muted)}
+
+@media(max-width:600px){
+  .cover-title{font-size:44px}
+  .menu-body{padding:1.75rem 1.5rem 1rem}
+  .menu-footer{padding:1rem 1.5rem 1.5rem;flex-direction:column;gap:.5rem;text-align:center}
+  .items-grid{grid-template-columns:1fr}
+  .featured-row{grid-template-columns:1fr}
+  .feat-img{height:180px}
+  .photo-strip{grid-template-columns:1fr}
+  .photo-strip .strip-cell:not(:first-child){display:none}
+  .photo-pair{grid-template-columns:1fr;height:auto}
+  .photo-pair .pc{height:160px}
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-brand">La Belle Table <span>· Catering Atelier</span></div>
+  <div class="nav-tabs" id="navTabs">
+    <button class="nav-tab active-g" onclick="show('buffet',this,'active-g')">Open Buffet</button>
+    <button class="nav-tab" onclick="show('finger',this,'active-r')">Finger Food</button>
+    <button class="nav-tab" onclick="show('desserts',this,'active-l')">Desserts</button>
+  </div>
+</nav>
+
+<!-- ═══════════════ BUFFET ═══════════════ -->
+<div class="panel on t-gold" id="buffet">
+<div class="menu-page">
+
+  <div class="cover">
+    <img class="cover-photo" src="https://images.unsplash.com/photo-1555244162-803834f70033?w=1400&q=85&fit=crop" alt="Open buffet spread">
+    <div class="cover-overlay"></div>
+    <div class="cover-content">
+      <div class="cover-eyebrow">La Belle Table · Wedding Collection 2025</div>
+      <div class="cover-ornament" style="color:#C9A96E"><div class="orn-line"></div><div class="orn-dia"></div><div class="orn-dia" style="transform:rotate(45deg) scale(.6);opacity:.5"></div><div class="orn-dia"></div><div class="orn-line"></div></div>
+      <div class="cover-title">Open Buffet</div>
+      <div class="cover-sub">A curated spread for your celebration</div>
+      <div class="cover-ornament" style="color:#C9A96E"><div class="orn-line"></div><div class="orn-dia"></div><div class="orn-line"></div></div>
+      <div class="cover-tagline">Abundance crafted with intention —<br>every dish a memory waiting to be made.</div>
+    </div>
+  </div>
+
+  <div class="photo-strip">
+    <div class="strip-cell">
+      <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80&fit=crop" alt="Mezze platter">
+      <div class="strip-label">Mezze & Starters</div>
+    </div>
+    <div class="strip-cell">
+      <img src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=600&q=80&fit=crop" alt="Roast main">
+      <div class="strip-label">Hot Mains</div>
+    </div>
+    <div class="strip-cell">
+      <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80&fit=crop" alt="Salads">
+      <div class="strip-label">Salads & Sides</div>
+    </div>
+  </div>
+
+  <div class="menu-body">
+
+    <div class="section">
+      <div class="sec-head">
+        <div class="sec-title">Opening Display</div><div class="sec-rule"></div>
+      </div>
+      <div class="featured-row">
+        <div class="feat-img">
+          <img src="https://images.unsplash.com/photo-1541533848490-bc8115cd6522?w=400&q=80&fit=crop" alt="Grand mezze table">
+        </div>
+        <div class="feat-text">
+          <div class="feat-name">The Grand Mezze Table</div>
+          <div class="feat-desc">Our showpiece opening — a lavish spread of twelve traditional and contemporary dips, pickles, warm flatbreads, and seasonal crudités. Composed tableside by our team and replenished throughout the evening.</div>
+          <span class="feat-badge">Vegetarian · Signature Display</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="sec-head"><div class="sec-title">Cold Starters</div><div class="sec-rule"></div></div>
+      <div class="items-grid">
+        <div>
+          <div class="item"><div class="iname">Smoked Salmon Board</div><div class="idesc">Dill crème fraîche, capers, blinis, pickled cucumber</div></div>
+          <div class="item"><div class="iname">Caprese Station <span class="ibadge">vg</span></div><div class="idesc">Buffalo mozzarella, heirloom tomato, aged balsamic</div></div>
+          <div class="item"><div class="iname">Charcuterie Spread</div><div class="idesc">Cured meats, aged cheeses, fig jam, seeded crackers</div></div>
+          <div class="item"><div class="iname">Ceviche Station <span class="istar">★</span></div><div class="idesc">Sea bass, tiger's milk, chilli, sweet potato, coriander</div></div>
+        </div>
+        <div>
+          <div class="item"><div class="iname">Garden Salads <span class="ibadge">vg</span></div><div class="idesc">Fattoush, tabbouleh & Greek with preserved lemon</div></div>
+          <div class="item"><div class="iname">Roasted Beet Salad <span class="ibadge">vg</span></div><div class="idesc">Candied walnuts, goat cheese, arugula, orange vinaigrette</div></div>
+          <div class="item"><div class="iname">Burrata & Prosciutto</div><div class="idesc">San Daniele, truffle honey, rocket, toasted pine nuts</div></div>
+          <div class="item"><div class="iname">Grilled Vegetable Board <span class="ibadge">vg</span></div><div class="idesc">Za'atar, pomegranate molasses, labneh</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="photo-pair">
+      <div class="pc">
+        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=700&q=82&fit=crop" alt="Buffet spread">
+        <div class="pc-label">The full spread</div>
+      </div>
+      <div class="pc">
+        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=500&q=82&fit=crop" alt="Roast lamb">
+        <div class="pc-label">Slow-roast lamb</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="sec-head"><div class="sec-title">Hot Mains</div><div class="sec-rule"></div></div>
+      <div class="items-grid">
+        <div>
+          <div class="item"><div class="iname">Slow-Roast Lamb <span class="istar">★</span></div><div class="idesc">Ras el hanout, pomegranate jus, herb couscous</div></div>
+          <div class="item"><div class="iname">Grilled Sea Bass</div><div class="idesc">Chermoula, saffron rice, charred lemon</div></div>
+          <div class="item"><div class="iname">Chicken Provençal</div><div class="idesc">Olives, sun-dried tomato, fresh thyme, white wine</div></div>
+        </div>
+        <div>
+          <div class="item"><div class="iname">Beef Tenderloin <span class="istar">★</span></div><div class="idesc">Red wine reduction, truffle potato gratin</div></div>
+          <div class="item"><div class="iname">Wild Mushroom Risotto <span class="ibadge">vg</span></div><div class="idesc">Porcini, aged parmesan, white truffle oil</div></div>
+          <div class="item"><div class="iname">Saffron Biryani <span class="ibadge">vg</span></div><div class="idesc">Basmati, caramelized onion, golden raisins, raita</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chef-note">
+      <div class="cn-quote">"</div>
+      <div class="cn-inner">
+        <div class="cn-label">A note from our chef</div>
+        <div class="cn-text">Every dish on this buffet is prepared fresh on the day of your celebration. We source our proteins locally and our spices from a small family supplier in the Nile Delta — a detail that makes every bite distinctly ours.</div>
+        <div class="cn-sig">— Executive Chef, La Belle Table</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="sec-head"><div class="sec-title">Sides & Accompaniments</div><div class="sec-rule"></div></div>
+      <div class="items-grid">
+        <div>
+          <div class="item"><div class="iname">Roasted Vegetables <span class="ibadge">vg</span></div><div class="idesc">Seasonal medley, za'atar & olive oil</div></div>
+          <div class="item"><div class="iname">Potato Dauphinoise <span class="ibadge">vg</span></div><div class="idesc">Gruyère, cream, roasted garlic</div></div>
+        </div>
+        <div>
+          <div class="item"><div class="iname">Artisan Bread Station</div><div class="idesc">Sourdough, focaccia, pita, infused butters</div></div>
+          <div class="item"><div class="iname">Sauce Selection</div><div class="idesc">Béarnaise, harissa, tzatziki, mushroom velouté</div></div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end menu-body -->
+
+  <div class="menu-footer">
+    <div class="footer-left">vg · vegetarian &nbsp;·&nbsp; ★ chef's selection<br>Allergen info available on request · All dishes prepared fresh on the day</div>
+    <div class="footer-brand" style="color:var(--gold-dark)">La Belle Table</div>
+  </div>
+
+</div>
+</div><!-- end buffet panel -->
+
+<!-- ═══════════════ FINGER FOOD ═══════════════ -->
+<div class="panel t-rose" id="finger">
+<div class="menu-page">
+
+  <div class="cover">
+    <img class="cover-photo" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&q=85&fit=crop" alt="Elegant canapés">
+    <div class="cover-overlay"></div>
+    <div class="cover-content">
+      <div class="cover-eyebrow">La Belle Table · Cocktail Reception 2025</div>
+      <div class="cover-ornament" style="color:#C49A8A"><div class="orn-line"></div><div class="orn-dia"></div><div class="orn-dia" style="transform:rotate(45deg) scale(.6);opacity:.5"></div><div class="orn-dia"></div><div class="orn-line"></div></div>
+      <div class="cover-title">Finger Food</div>
+      <div class="cover-sub">Elegant bites for the cocktail hour</div>
+      <div class="cover-ornament" style="color:#C49A8A"><div class="orn-line"></div><div class="orn-dia"></div><div class="orn-line"></div></div>
+      <div class="cover-tagline">Designed for mingling, crafted for memory —<br>each bite a conversation starter.</div>
+    </div>
+  </div>
+
+  <div class="photo-strip">
+    <div class="strip-cell">
+      <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=600&q=80&fit=crop" alt="Cold canapés">
+      <div class="strip-label">Cold Canapés</div>
+    </div>
+    <div class="strip-cell">
+      <img src="https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=600&q=80&fit=crop" alt="Skewers">
+      <div class="strip-label">Hot Bites</div>
+    </div>
+    <div class="strip-cell">
+      <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&q=80&fit=crop" alt="Mini sliders">
+      <div class="strip-label">Passed Trays</div>
+    </div>
+  </div>
+
+  <div class="menu-body">
+
+    <div class="section">
+      <div class="sec-head"><div class="sec-title">Welcome Moment</div><div class="sec-rule"></div></div>
+      <div class="featured-row">
+        <div class="feat-img">
+          <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=400&q=80&fit=crop" alt="Welcome tray canapés">
+        </div>
+        <div class="feat-text">
+          <div class="feat-name">The Welcome Tray</div>
+          <div class="feat-desc">Passed on arrival by our white-gloved service team — a curated trio of our three most celebrated canapés: smoked salmon blini, truffle arancini, and burrata crostini. First impressions crafted to perfection.</div>
+          <span class="feat-badge">Chef's Selection · On Arrival</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="sec-head"><div class="sec-title">Cold Canapés</div><div class="sec-rule"></div></div>
+      <div class="items-grid">
+        <div>
+          <div class="item"><div class="iname">Smoked Salmon Blini <span class="istar">★</span></div><div class="idesc">Cream cheese, dill, salmon roe, micro herbs</div></div>
+          <div class="item"><div class="iname">Burrata Crostini <span class="ibadge">vg</span></div><div class="idesc">Heirloom tomato, basil oil, fleur de sel</div></div>
+          <div class="item"><div class="iname">Tuna Tartare Spoon</div><div class="idesc">Avocado, sesame, ponzu, pickled ginger</div></div>
+        </div>
+        <div>
+          <div class="item"><div class="iname">Cucumber Rounds <span class="ibadge">vg</span></div><div class="idesc">Whipped feta, roasted pepper, za'atar</div></div>
+          <div class="item"><div class="iname">Prosciutto & Melon</div><div class="idesc">San Daniele, honeydew, black pepper, mint</div></div>
+          <div class="item"><div class="iname">Endive & Roquefort <span class="ibadge">vg</span></div><div class="idesc">Walnut, honey, poached pear</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="photo-pair">
+      <div class="pc">
+        <img src="https://images.unsplash.com/photo-1484723091739-30990e2cc523?w=700&q=82&fit=crop" alt="Canapés display">
+        <div class="pc-label">Canapé display</div>
+      </div>
+      <div class="pc">
+        <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=500&q=82&fit=crop" alt="Truffle arancini">
+        <div class="pc-label">Truffle arancini</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="sec-head"><div class="sec-title">Hot Bites</div><div class="sec-rule"></div></div>
+      <div class="items-grid">
+        <div>
+          <div class="item"><div class="iname">Lamb Kofta Skewer <span class="istar">★</span></div><div class="idesc">Harissa aioli, toasted pine nuts, herb garnish</div></div>
+          <div class="item"><div class="iname">Truffle Arancini <span class="ibadge">vg</span></div><div class="idesc">Porcini risotto, parmesan, lemon aioli</div></div>
+          <div class="item"><div class="iname">Cheese Borek <span class="ibadge">vg</span></div><div class="idesc">Crisp filo, feta & herb filling, honey drizzle</div></div>
+        </div>
+        <div>
+          <div class="item"><div class="iname">Shrimp Tempura</div><div class="idesc">Yuzu dipping sauce, sesame, pickled ginger</div></div>
+          <div class="item"><div class="iname">Beef Sliders <span class="istar">★</span></div><div class="idesc">Brioche bun, caramelized onion, truffle mayo</div></div>
+          <div class="item"><div class="iname">Chicken Shawarma Skewer</div><div class="idesc">Labneh dip, sumac onion, fresh herb</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chef-note">
+      <div class="cn-quote">"</div>
+      <div class="cn-inner">
+        <div class="cn-label">Service standard</div>
+        <div class="cn-text">Each canapé is assembled on-site for peak freshness. Our dedicated floor team circulates trays continuously — nothing sits more than eight minutes before it reaches your guests.</div>
+        <div class="cn-sig">— Service Director, La Belle Table</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="sec-head"><div class="sec-title">Passed Bites</div><div class="sec-rule"></div></div>
+      <div class="items-grid">
+        <div>
+          <div class="item"><div class="iname">Gazpacho Shot <span class="ibadge">vg</span></div><div class="idesc">Heirloom tomato, basil oil, sourdough croûton</div></div>
+          <div class="item"><div class="iname">Lobster Profiterole <span class="istar">★</span></div><div class="idesc">Choux, lobster bisque cream, tobiko</div></div>
+        </div>
+        <div>
+          <div class="item"><div class="iname">Duck Confit Tartlet</div><div class="idesc">Caramelized fig, port reduction, thyme</div></div>
+          <div class="item"><div class="iname">Caprese Skewer <span class="ibadge">vg</span></div><div class="idesc">Cherry tomato, bocconcini, pesto drizzle</div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="menu-footer">
+    <div class="footer-left">vg · vegetarian &nbsp;·&nbsp; ★ chef's selection<br>Allergen info available on request · Served by our dedicated table team</div>
+    <div class="footer-brand" style="color:var(--rose-dark)">La Belle Table</div>
+  </div>
+
+</div>
+</div><!-- end finger panel -->
+
+<!-- ═══════════════ DESSERTS ═══════════════ -->
+<div class="panel t-lav" id="desserts">
+<div class="menu-page">
+
+  <div class="cover">
+    <img class="cover-photo" src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=1400&q=85&fit=crop" alt="Elegant desserts table">
+    <div class="cover-overlay"></div>
+    <div class="cover-content">
+      <div class="cover-eyebrow">La Belle Table · Sweet Table 2025</div>
+      <div class="cover-ornament" style="color:#A89BB8"><div class="orn-line"></div><div class="orn-dia"></div><div class="orn-dia" style="transform:rotate(45deg) scale(.6);opacity:.5"></div><div class="orn-dia"></div><div class="orn-line"></div></div>
+      <div class="cover-title">Desserts</div>
+      <div class="cover-sub">The sweetest finale to your day</div>
+      <div class="cover-ornament" style="color:#A89BB8"><div class="orn-line"></div><div class="orn-dia"></div><div class="orn-line"></div></div>
+      <div class="cover-tagline">Where every bite tells a story —<br>memories spun from sugar, cream, and love.</div>
+    </div>
+  </div>
+
+  <div class="photo-strip">
+    <div class="strip-cell">
+      <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&q=80&fit=crop" alt="Macaron tower">
+      <div class="strip-label">Macaron Tower</div>
+    </div>
+    <div class="strip-cell">
+      <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=80&fit=crop" alt="Plated desserts">
+      <div class="strip-label">Plated Desserts</div>
+    </div>
+    <div class="strip-cell">
+      <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=600&q=80&fit=crop" alt="Sweet table">
+      <div class="strip-label">Sweet Table</div>
+    </div>
+  </div>
+
+  <div class="menu-body">
+
+    <div class="section">
+      <div class="sec-head"><div class="sec-title">The Centrepiece</div><div class="sec-rule"></div></div>
+      <div class="featured-row">
+        <div class="feat-img">
+          <img src="https://images.unsplash.com/photo-1558636508-e0db3814bd1d?w=400&q=80&fit=crop" alt="Macaron tower centrepiece">
+        </div>
+        <div class="feat-text">
+          <div class="feat-name">The Macaron Tower</div>
+          <div class="feat-desc">Our signature architectural centrepiece — sixty hand-crafted macarons in your chosen color palette, stacked into a 60cm tower and decorated with edible flowers, gold leaf, and silk ribbon. A visual moment as memorable as the flavor.</div>
+          <span class="feat-badge">Bespoke · Available in any color palette</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="sec-head"><div class="sec-title">Plated Desserts</div><div class="sec-rule"></div></div>
+      <div class="items-grid">
+        <div>
+          <div class="item"><div class="iname">Vanilla Crème Brûlée <span class="ibadge">vg</span></div><div class="idesc">Madagascar vanilla, caramelized crust, fresh berries</div></div>
+          <div class="item"><div class="iname">Dark Chocolate Fondant <span class="istar">★</span></div><div class="idesc">Valrhona 70%, salted caramel core, edible gold leaf</div></div>
+          <div class="item"><div class="iname">Rose Panna Cotta <span class="ibadge">vg</span></div><div class="idesc">Rose water, pistachio brittle, Turkish delight</div></div>
+        </div>
+        <div>
+          <div class="item"><div class="iname">Lemon Tart <span class="ibadge">vg</span></div><div class="idesc">Italian meringue, Sicilian lemon curd, almond sablé</div></div>
+          <div class="item"><div class="iname">Mille-Feuille <span class="ibadge">vg</span></div><div class="idesc">Caramelized puff, vanilla diplomat, fruit glaze</div></div>
+          <div class="item"><div class="iname">Tiramisu Verrine <span class="ibadge">vg</span></div><div class="idesc">Espresso sponge, mascarpone mousse, cocoa dust</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="photo-pair">
+      <div class="pc">
+        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=700&q=82&fit=crop" alt="Dessert table display">
+        <div class="pc-label">The sweet table</div>
+      </div>
+      <div class="pc">
+        <img src="https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?w=500&q=82&fit=crop" alt="Chocolate fondant">
+        <div class="pc-label">Chocolate fondant</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="sec-head"><div class="sec-title">Sweet Table</div><div class="sec-rule"></div></div>
+      <div class="items-grid">
+        <div>
+          <div class="item"><div class="iname">Macaron Selection <span class="ibadge">vg</span></div><div class="idesc">Seasonal flavors, edible flowers, gold dust</div></div>
+          <div class="item"><div class="iname">Petit Fours <span class="ibadge">vg</span></div><div class="idesc">Champagne truffle, pistachio financier, salted caramel</div></div>
+          <div class="item"><div class="iname">Kunafa Bites <span class="istar">★</span></div><div class="idesc">Orange blossom syrup, crushed pistachio, clotted cream</div></div>
+        </div>
+        <div>
+          <div class="item"><div class="iname">Seasonal Fruit Tarts <span class="ibadge">vg</span></div><div class="idesc">Pastry cream, poached fruits, apricot glaze</div></div>
+          <div class="item"><div class="iname">Profiterole Stack <span class="ibadge">vg</span></div><div class="idesc">Choux, Chantilly cream, warm chocolate sauce</div></div>
+          <div class="item"><div class="iname">Basbousa <span class="ibadge">vg</span></div><div class="idesc">Semolina, rose water syrup, almond topping</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chef-note">
+      <div class="cn-quote">"</div>
+      <div class="cn-inner">
+        <div class="cn-label">Bespoke pastry service</div>
+        <div class="cn-text">Our pastry team customizes flavors, color palettes, and plating to reflect your wedding theme. Every dessert can be personalized with your initials in edible gold — and the macaron tower is available in any color family.</div>
+        <div class="cn-sig">— Head Pastry Chef, La Belle Table</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="sec-head"><div class="sec-title">Live Stations</div><div class="sec-rule"></div></div>
+      <div class="items-grid">
+        <div>
+          <div class="item"><div class="iname">Chocolate Fondue <span class="ibadge">vg</span></div><div class="idesc">Dark, milk & white chocolate with seasonal dippers</div></div>
+          <div class="item"><div class="iname">Crêpe Station <span class="ibadge">vg</span></div><div class="idesc">Made-to-order, seasonal fillings & toppings</div></div>
+        </div>
+        <div>
+          <div class="item"><div class="iname">Artisan Ice Cream Bar <span class="ibadge">vg</span></div><div class="idesc">Six flavors, sauces, seasonal toppings</div></div>
+          <div class="item"><div class="iname">Cotton Candy Floss <span class="ibadge">vg</span></div><div class="idesc">Spun-to-order: lavender, rose & classic vanilla</div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="menu-footer">
+    <div class="footer-left">vg · vegetarian &nbsp;·&nbsp; ★ chef's selection<br>Custom wedding cake available separately · Allergen info on request</div>
+    <div class="footer-brand" style="color:var(--lav-dark)">La Belle Table</div>
+  </div>
+
+</div>
+</div><!-- end desserts panel -->
+
+<script>
+function show(id, btn, cls) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('on'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.className = 'nav-tab');
+  document.getElementById(id).classList.add('on');
+  btn.classList.add(cls);
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+</body>
+</html>
